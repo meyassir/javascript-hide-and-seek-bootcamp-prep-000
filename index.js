@@ -24,7 +24,7 @@ function nestedTarget()
 
 function deepestChild()
 {
-  element = document.getElementById("grand-node");
+  let element = document.getElementById("grand-node");
 
   while(element.children.length)
   {
