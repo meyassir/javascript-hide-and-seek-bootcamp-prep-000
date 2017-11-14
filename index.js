@@ -8,3 +8,10 @@ function nestedTarget()
   let element = document.getElementById("nested").querySelector(".target");
   return element;
 }
+
+
+function deepestChild()
+{
+  let element = document.getElementById("grand-node").lastChild;
+  return element;
+}
