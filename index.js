@@ -10,11 +10,25 @@ function nestedTarget()
 }
 
 
-function deepestChild(element = document.getElementById("grand-node"))
+function getFirstSelector(selector)
 {
-  if (element.children.length) {
-    element = deepestChild(element.lastElementChild);
-  } else {
-    return element;
+  return document.querySelector(selector);
+}
+
+function nestedTarget()
+{
+  let element = document.getElementById("nested").querySelector(".target");
+  return element;
+}
+
+
+function deepestChild()
+{
+  element = document.getElementById("grand-node");
+  
+  while(element.children.length)
+  {
+    element = element.lastElementChild;
   }
+  return element;
 }
