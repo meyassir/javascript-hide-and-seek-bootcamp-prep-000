@@ -10,8 +10,11 @@ function nestedTarget()
 }
 
 
-function deepestChild()
+function deepestChild(element = document.getElementById("grand-node"))
 {
-  let element = document.getElementById("grand-node");
-  return element.lastChild;
+  if (element.children.length) {
+    element = deepestChild(element.lastElementChild);
+  } else {
+    return element;
+  }
 }
